@@ -2,10 +2,16 @@
 
 ## Overview
 
-The **Gemini Video Tool** is used to access Gemini's video generation and editing models (Veo 3.1). Currently, this plugin supports the following models.
+The **Gemini Video Tool** accesses Gemini's current video generation models. It keeps the existing Dify tool interface while routing each model to the API it requires.
 
+- Gemini Omni 1.1 Flash (recommended)
 - Veo 3.1
 - Veo 3.1 Fast
+- Veo 3.1 Lite
+
+Use the exact model IDs shown in the tool selector. `gemini-omni-1.1-flash` uses the Interactions API; the Veo models use the long-running `generate_videos` API.
+
+Gemini Omni does not expose dedicated duration or negative-prompt fields. The tool preserves those Dify inputs by adding them to the regular prompt. Omni supports 360p, 720p, 1080p, and 4K output. Veo validates its stricter combinations (for example, 1080p/4K and reference-image generation require an 8-second duration).
 
 ---
 
@@ -36,4 +42,3 @@ Add a **Gemini Video node** to generate or edit videos during flow execution.
 
 ### Agent Applications
 Enable the **Gemini Video tool** in Agent applications.  
-

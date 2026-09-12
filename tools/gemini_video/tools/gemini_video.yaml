@@ -6,9 +6,9 @@ identity:
     zh_Hans: "gemini通用视频生成工具"
 description:
   human:
-    en_US: "gemini video generation support for Veo 3.1"
-    zh_Hans: "Gemini 视频生成，支持 Veo 3.1"
-  llm: "gemini video generation support for Veo 3.1"
+    en_US: "Gemini video generation with Gemini Omni Flash and Veo 3.1"
+    zh_Hans: "Gemini 视频生成，支持 Gemini Omni Flash 和 Veo 3.1"
+  llm: "Gemini video generation with Gemini Omni Flash and Veo 3.1"
 parameters:
   - name: model
     type: select
@@ -20,7 +20,12 @@ parameters:
       en_US: "select a model to generate video"
       zh_Hans: "选择一个模型生成视频"
     form: form
+    default: "gemini-omni-1.1-flash"
     options:
+      - value: "gemini-omni-1.1-flash"
+        label:
+          en_US: "Gemini Omni 1.1 Flash"
+          zh_Hans: "Gemini Omni 1.1 Flash"
       - value: "veo-3.1-generate-preview"
         label:
           en_US: "Veo3.1"
@@ -29,6 +34,10 @@ parameters:
         label:
           en_US: "Veo3.1 Fast"
           zh_Hans: "Veo3.1 Fast"
+      - value: "veo-3.1-lite-generate-preview"
+        label:
+          en_US: "Veo3.1 Lite"
+          zh_Hans: "Veo3.1 Lite"
   - name: prompt
     type: string
     required: true
@@ -130,6 +139,10 @@ parameters:
       zh_Hans: "生成视频的分辨率"
     form: form
     options:
+      - value: "360p"
+        label:
+          en_US: "360p (Omni only)"
+          zh_Hans: "360p（仅 Omni）"
       - value: "720p"
         label:
           en_US: "720p"
@@ -138,6 +151,10 @@ parameters:
         label:
           en_US: "1080p"
           zh_Hans: "1080p"
+      - value: "4k"
+        label:
+          en_US: "4K"
+          zh_Hans: "4K"
     default: "720p"
   - name: duration_seconds
     type: select

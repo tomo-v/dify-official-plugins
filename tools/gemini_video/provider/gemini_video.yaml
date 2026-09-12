@@ -5,8 +5,8 @@ identity:
     en_US: "Gemini Video"
     zh_Hans: "Gemini 视频"
   description:
-    en_US: "gemini video generation support for Veo 3.1"
-    zh_Hans: "gemini 视频支持"
+    en_US: "Gemini video generation with Gemini Omni Flash and Veo 3.1"
+    zh_Hans: "Gemini 视频生成，支持 Gemini Omni Flash 和 Veo 3.1"
   icon: icon.svg
   icon_dark: icon-dark.svg
   tags:
