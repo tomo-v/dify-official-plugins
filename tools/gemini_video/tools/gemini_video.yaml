@@ -1,6 +1,6 @@
 identity:
   name: "gemini_video_general"
-  author: "langgenius"
+  author: "tomo-v"
   label:
     en_US: "Gemini Video Generation"
     zh_Hans: "gemini通用视频生成工具"

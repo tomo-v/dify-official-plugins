@@ -1,6 +1,6 @@
 version: 0.0.17
 type: plugin
-author: langgenius
+author: tomo-v
 name: gemini_video
 label:
   en_US: Gemini Video
