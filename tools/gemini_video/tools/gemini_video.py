@@ -120,7 +120,8 @@ class GeminiVideoTool(Tool):
                 "delivery": "uri",
             },
             "background": False,
-            "store": False,
+            # URI-delivered video output must be persisted by the API.
+            "store": True,
             "stream": False,
         }
 
