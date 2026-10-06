@@ -307,16 +307,18 @@ class GeminiVideoTool(Tool):
             raise InvokeError(f"aspect_ratio:{aspect_ratio} is not supported")
         if duration_seconds not in {4, 6, 8}:
             raise InvokeError(f"duration_seconds:{duration_seconds} is not supported")
-        if len(ref_images) > 3:
-            raise InvokeError("ref_images count can not be more than 3")
-
         if model in OMNI_MODELS:
+            # Provisional plugin limit, not a documented Omni API maximum.
+            if len(ref_images) > 6:
+                raise InvokeError("Omni ref_images count can not be more than 6")
             if resolution not in {"360p", "720p", "1080p", "4k"}:
                 raise InvokeError(f"resolution:{resolution} is not supported by {model}")
             if last_frame and not image:
                 raise InvokeError("first image is required when last_frame is set")
             return
 
+        if len(ref_images) > 3:
+            raise InvokeError("Veo ref_images count can not be more than 3")
         if resolution not in {"720p", "1080p", "4k"}:
             raise InvokeError(f"resolution:{resolution} is not supported by {model}")
         if last_frame and not image:

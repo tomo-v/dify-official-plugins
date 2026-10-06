@@ -13,6 +13,8 @@ Use the exact model IDs shown in the tool selector. `gemini-omni-1.1-flash` uses
 
 Gemini Omni does not expose dedicated duration or negative-prompt fields. The tool preserves those Dify inputs by adding them to the regular prompt. Omni supports 360p, 720p, 1080p, and 4K output. Veo validates its stricter combinations (for example, 1080p/4K and reference-image generation require an 8-second duration).
 
+The Reference Images input accepts up to 6 images for Omni (a provisional plugin limit), or up to 3 for Veo 3.1/Fast. Veo 3.1 Lite does not support reference images. For Omni, image roles are left to the prompt; the plugin does not add role tags automatically.
+
 ---
 
 ## Configuration

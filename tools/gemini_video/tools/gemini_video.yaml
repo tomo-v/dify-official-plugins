@@ -95,8 +95,8 @@ parameters:
       en_US: Reference Images
       zh_Hans: 参考图片
     human_description:
-      en_US: "Multiple reference images for video style/ content guidance"
-      zh_Hans: "用于指导视频风格/内容的多张参考图片"
+      en_US: "Multiple reference images for video style/content guidance (Omni: up to 6; Veo 3.1/Fast: up to 3; Veo 3.1 Lite: unsupported)"
+      zh_Hans: "用于指导视频风格/内容的多张参考图片（Omni：最多6张；Veo 3.1/Fast：最多3张；Veo 3.1 Lite：不支持）"
     form: form
   - name: ref_video
     type: file
